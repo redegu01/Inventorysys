@@ -1,0 +1,12 @@
+com\degu\inventory\serviceimpl\InventoryItemServiceImpl.class
+com\degu\inventory\serviceimpl\CategoryServiceImpl.class
+com\degu\inventory\serviceimpl\WarehouseServiceImpl.class
+com\degu\inventory\controller\CategoryController.class
+com\degu\inventory\controller\InventoryStatusController.class
+com\degu\inventory\controller\WarehouseController.class
+com\degu\inventory\controller\StockOperationRequest.class
+com\degu\inventory\controller\InventoryItemController.class
+com\degu\inventory\InventoryManagementApplication.class
+com\degu\inventory\serviceimpl\ProductServiceImpl.class
+com\degu\inventory\controller\ProductController.class
+com\degu\inventory\serviceimpl\InventoryStatusServiceImpl.class

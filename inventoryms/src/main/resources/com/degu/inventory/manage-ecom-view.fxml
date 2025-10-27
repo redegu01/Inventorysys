@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="700.0" prefWidth="900.0" spacing="15.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.degu.inventory.ManageInventoryItemsController">
+	<padding>
+		<Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+	</padding>
+
+	<Label text="Manage Inventory Items" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-padding: 0 0 10 0;" />
+
+	<HBox spacing="20.0" alignment="TOP_LEFT" VBox.vgrow="ALWAYS"
+		  style="-fx-border-color: #CCCCCC; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-padding: 15px; -fx-background-color: #E0F2F7;">
+
+		<ListView fx:id="lvEcommerces" onMouseClicked="#onAction" prefWidth="450.0" HBox.hgrow="ALWAYS">
+		</ListView>
+
+		<VBox spacing="10.0" alignment="TOP_CENTER" prefWidth="150.0" HBox.hgrow="ALWAYS">
+
+			<HBox spacing="5.0" alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+				<Label text="Search:" style="-fx-font-weight: bold;"/>
+				<TextField fx:id="txtSearch" promptText="Name or Desc" HBox.hgrow="ALWAYS" />
+				<Button fx:id="btnSearch" text="Go" />
+			</HBox>
+			<Separator prefWidth="200.0" />
+
+			<Button fx:id="btnDelete" mnemonicParsing="false" onAction="#onDelete" text="Delete Item" maxWidth="Infinity" style="-fx-base: #FF6347;">
+				<VBox.margin>
+					<Insets bottom="5.0" />
+				</VBox.margin>
+			</Button>
+			<Button fx:id="btnEdit" mnemonicParsing="false" onAction="#onEdit" text="Edit Item" maxWidth="Infinity" style="-fx-base: #4682B4;">
+				<VBox.margin>
+					<Insets bottom="5.0" />
+				</VBox.margin>
+			</Button>
+			<Button fx:id="btnCreate" mnemonicParsing="false" onAction="#onCreate" text="Create Item" maxWidth="Infinity" style="-fx-base: #3CB371;">
+				<VBox.margin>
+					<Insets bottom="5.0" />
+				</VBox.margin>
+			</Button>
+			<Region VBox.vgrow="ALWAYS" />
+			<Button fx:id="btnClose" mnemonicParsing="false" onAction="#onClose" text="Close" maxWidth="Infinity" style="-fx-base: #A9A9A9;">
+			</Button>
+		</VBox>
+	</HBox>
+
+	<GridPane hgap="10.0" vgap="10.0" alignment="CENTER_LEFT" VBox.vgrow="ALWAYS"
+			  style="-fx-border-color: #CCCCCC; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-padding: 15px; -fx-background-color: #E0F2F7;">
+		<columnConstraints>
+			<ColumnConstraints percentWidth="25.0" halignment="RIGHT"/>
+			<ColumnConstraints percentWidth="75.0"/>
+		</columnConstraints>
+
+		<Label text="Id" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+		<TextField fx:id="txtId" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+		<Label text="Name" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+		<TextField fx:id="txtName" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+		<Label text="Description" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+		<TextField fx:id="txtDescription" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+		<Label text="Product" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+		<StackPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+			<children>
+				<ComboBox fx:id="cmbProduct" prefWidth="Infinity" />
+				<TextField fx:id="txtProductName" editable="false" prefWidth="Infinity" />
+			</children>
+		</StackPane>
+
+		<Label text="Category" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+		<StackPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+			<children>
+				<ComboBox fx:id="cmbCategory" prefWidth="Infinity" />
+				<TextField fx:id="txtCategoryName" editable="false" prefWidth="Infinity" />
+			</children>
+		</StackPane>
+
+		<Label text="Status" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+		<StackPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+			<children>
+				<ComboBox fx:id="cmbStatus" prefWidth="Infinity" />
+				<TextField fx:id="txtStatusName" editable="false" prefWidth="Infinity" />
+			</children>
+		</StackPane>
+
+		<Label text="Quantity Available" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+		<TextField fx:id="txtQuantityAvailable" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+		<Label text="Warehouse" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+		<StackPane GridPane.columnIndex="1" GridPane.rowIndex="7">
+			<children>
+				<ComboBox fx:id="cmbInventory" prefWidth="Infinity" />
+				<TextField fx:id="txtInventoryName" editable="false" prefWidth="Infinity" />
+			</children>
+		</StackPane>
+
+		<Label text="Price" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+		<TextField fx:id="txtPrice" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+	</GridPane>
+</VBox>
